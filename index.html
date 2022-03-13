@@ -140,6 +140,15 @@
     
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-M9HNJ19VZZ"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-M9HNJ19VZZ');
+	</script>
   </head>
   <body>
     
@@ -442,8 +451,6 @@ new Chart("myChart3", {
   }
 });
 </script>
-
-
 
 <script>
  document.addEventListener("DOMContentLoaded", function() {
@@ -849,7 +856,9 @@ new Chart("myChart3", {
 		  <hr>
           <p><strong>Реальная ситуация:</strong></p>
 			<p>Это не так. Вот видео о том, как встречают российскую армию обычные украинцы:</p>
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/4JIVZbUZ5io" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<div class="lazy-iframe-container">
+			<iframe class="iframe-youtube-lazy-video lazy" width="560" height="315" data-src="https://www.youtube.com/embed/4JIVZbUZ5io" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+			</div>
 			<hr>
 			<p><strong>Цель официальной позиции:</strong></p> <p>Оправдать вторжение в Украину тем, что Россию там ждут.</p>
           

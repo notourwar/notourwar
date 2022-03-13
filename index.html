@@ -445,14 +445,44 @@ new Chart("myChart3", {
 
 
 
+<script>
+ document.addEventListener("DOMContentLoaded", function() {
+  if ("IntersectionObserver" in window) {
+   var iframesLazy = document.querySelectorAll("iframe.iframe-youtube-lazy-video");
+   var iframeObserver = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(function (entry) {
+     if (entry.isIntersecting && entry.target.src.length == 0) {
+      entry.target.src = entry.target.dataset.src;
+      iframeObserver.unobserve(entry.target);
+     } 
+    });
+   });
+   iframesLazy.forEach(function (iframe) {
+    iframeObserver.observe(iframe);
+   });
+  } else {
+   var iframesLazy = document.querySelector('iframe.iframe-youtube-lazy-video');
+   for (var i = 0; i < iframesLazy.length; i++) {
+    if (lazyVids[i].getAttribute('data-src')) {
+     lazyVids[i].setAttribute('src', lazyVids[i].getAttribute('data-src'));
+    }
+   }
+  }
+ });
+</script>
+
 <h2 class="mt-4 mb-4">Война в Украине: Карта боевых действий от liveuamap.com</h2> 
 <p>Источник: <a href="https://liveuamap.com" target="_blank">liveuamap.com</a></p>
-<iframe style="width:1200px;height: 500px;border:0px" src="https://liveuamap.com"></iframe>
+<div class="lazy-iframe-container">
+<iframe style="width:1200px;height: 500px;border:0px" data-src="https://liveuamap.com" class="iframe-youtube-lazy-video lazy"></iframe>
+</div>
 
 <h2 class="mt-4 mb-4">Война в Украине: Карта боевых действий и разрушений от Meduza.io</h2> 
 
 <p>Источник: <a href="https://meduza.io/feature/2022/02/26/karta-voyny-v-ukraine-posmotrite-gde-idut-boi-segodnya" target="_blank">Meduza.io</a></p>
-<iframe width="650" height="650" src="https://maphub.net/embed/179761?panel=1&panel_closed=1" frameborder="0"></iframe>
+<div class="lazy-iframe-container">
+<iframe width="650" height="650" data-src="https://maphub.net/embed/179761?panel=1&panel_closed=1" frameborder="0" class="iframe-youtube-lazy-video lazy"></iframe>
+</div>
 	
 	<!--- START -->
 	<div class="bd-example">

@@ -140,9 +140,15 @@
 	blockquote.blockstyle.border-color-yellow>span.triangle:before {
 		color: #fdb714
 	}
+	
+	
+	
 	}
     
 	@media screen and (max-width: 500px) {
+	
+	
+		
 	  section.block_content .container{
 		padding-left: 0 !important;
 		padding-right: 0 !important;
@@ -165,6 +171,32 @@
 	  }
 	  
 	} 
+	
+	 @media screen and (min-width: 1041px) {
+		.map_live_desktop {
+		display: block;
+	
+	}
+	
+	.map_live_mobile {
+		display: none; 
+	
+	}
+	 }
+	 
+	 @media screen and (max-width: 1040px) {
+	
+	.map_live_desktop {
+		display: none;
+	
+	}
+	
+	.map_live_mobile {
+		display: block;
+	
+	}
+	}
+	
 	
 	</style>
 
@@ -509,15 +541,24 @@ new Chart("myChart3", {
 
 <h2 class="mt-4 mb-4">Война в Украине: Карта боевых действий от liveuamap.com</h2> 
 <p>Источник: <a href="https://liveuamap.com" target="_blank">liveuamap.com</a></p>
+<div class="map_live_desktop">
 <div class="lazy-iframe-container">
-<iframe style="width:1200px;height: 500px;border:0px" data-src="https://liveuamap.com" class="iframe-youtube-lazy-video lazy"></iframe>
+<iframe width="100%" style="height: 500px;border:0px" data-src="https://liveuamap.com" class="iframe-youtube-lazy-video lazy"></iframe>
+</div> 
+</div>
+<div class="map_live_mobile">
+
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+         Эта карта боевых действий плохо встраивается в мобильную версию сайта. Рекомендуем перейти <a class="alert-link" href="https://liveuamap.com" target="_blank">по ссылке</a> и в меню в верхней части открывшейся страницы выбрать иконку "Карта" (второй значок слева). 
+        <br><br><a href="https://liveuamap.com" target="_blank"><button type="button" class="btn btn-warning">Открыть карту в новой вкладке</button></a>
+		</div>
 </div>
 
 <h2 class="mt-4 mb-4">Война в Украине: Карта боевых действий и разрушений от Meduza.io</h2> 
 
 <p>Источник: <a href="https://meduza.io/feature/2022/02/26/karta-voyny-v-ukraine-posmotrite-gde-idut-boi-segodnya" target="_blank">Meduza.io</a></p>
 <div class="lazy-iframe-container">
-<iframe width="650" height="650" data-src="https://maphub.net/embed/179761?panel=1&panel_closed=1" frameborder="0" class="iframe-youtube-lazy-video lazy"></iframe>
+<iframe width="100%" height="650" data-src="https://maphub.net/embed/179761?panel=1&panel_closed=1" frameborder="0" class="iframe-youtube-lazy-video lazy"></iframe>
 </div>
 	
 	<!--- START -->
@@ -886,7 +927,7 @@ new Chart("myChart3", {
           <p><strong>Реальная ситуация:</strong></p>
 			<p>Это не так. Вот видео о том, как встречают российскую армию обычные украинцы:</p>
 			<div class="lazy-iframe-container">
-			<iframe class="iframe-youtube-lazy-video lazy" width="560" height="315" data-src="https://www.youtube.com/embed/4JIVZbUZ5io" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+			<iframe class="iframe-youtube-lazy-video lazy" width="100%" height="315" data-src="https://www.youtube.com/embed/4JIVZbUZ5io" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
 			</div>
 			<hr>
 			<p><strong>Цель официальной позиции:</strong></p> <p>Оправдать вторжение в Украину тем, что Россию там ждут.</p>

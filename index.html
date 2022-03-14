@@ -30,12 +30,13 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
 	
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c96877fb7462d45"></script>
+	
 
 <meta name="theme-color" content="#dc3545">
 
 
-    <style>
+   <style>
+	
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -49,6 +50,10 @@
           font-size: 3.5rem;
         }
       }
+	  
+	  @media screen and (max-width: 501px) {
+	  
+	  
 	  
 	  blockquote {
     font-size: 1.1em;
@@ -135,7 +140,33 @@
 	blockquote.blockstyle.border-color-yellow>span.triangle:before {
 		color: #fdb714
 	}
-    </style>
+	}
+    
+	@media screen and (max-width: 500px) {
+	  section.block_content .container{
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+	  }
+	  
+	  section.block_content .container .blockstyle {
+		padding: 20px 1px 20px 10px !important;
+	  
+	  }
+	  
+	  .bd-example .bg-light {
+		 padding: 1rem!important;
+	  
+	  }
+	  
+	  .container {
+		padding-left: 7px !important;
+		padding-right: 7px !important;
+	  
+	  }
+	  
+	} 
+	
+	</style>
 
     
     <!-- Custom styles for this template -->
@@ -276,9 +307,7 @@
 		</div>
     </div>
 		
-		<p  class="h3 mt-4 mb-4"> Поделитесь информацией в социальных сетях:</p>
 		
-	  <div class="addthis_inline_share_toolbox"></div>
 	
 	<h2 class="mt-4 mb-4">Динамика потерь России в войне с Украиной</h2>
 
@@ -994,9 +1023,8 @@ new Chart("myChart3", {
 	
   </div>
   
-  <p  class="h3 mt-4 mb-4"> Поделитесь информацией в социальных сетях:</p>
-		
-	  <div class="addthis_inline_share_toolbox"></div>
+ 
+	
   
 </main>
 	
@@ -1004,6 +1032,8 @@ new Chart("myChart3", {
 
 
 
-      
+     
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c96877fb7462d45"></script>
+
   </body>
 </html>

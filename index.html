@@ -6,19 +6,22 @@
 	var poteri_smerti = [800,2800,3000,4500,5300,5710,5840,9000,9166,10000, 11000, 11000, 12000,12000,12000,12000,12000,12000,12000,13500];
 	var poteri_plen = [0,0,0,200,200,200,200,200,200,245,245,259,284,371,378,378,383,389,389,389];
 	
-	var dates_mirnye_by_ua = '2000+';
+	var dates_mirnye_by_ua = '2 000+';
 	
 	var dates_mirnye = ['24.02.2022','25.02.2022','26.02.2022','27.02.2022','28.02.2022','01.03.2022','02.03.2022','03.03.2022','04.03.2022','05.03.2022','06.03.2022','07.03.2022','08.03.2022','09.03.2022','10.03.2022','11.03.2022','12.03.2022','13.03.2022'];
 	var poteri_deti = [0,0,0,13,13,17,17,19,22,25,27,29,37,41,41,42,43,46];
 	var poteri_mirnye = [0,0,0,142,142,249,249,331,351,364,406,474,516,549,564,579,596,636];
 	
 	var poteri_smerti_s = poteri_smerti[poteri_smerti.length - 1];
+	var poteri_smerti_s_format = new Intl.NumberFormat("ru").format(poteri_smerti_s); 
 	var poteri_plen_s = poteri_plen[poteri_plen.length - 1];
+	var poteri_plen_s_format = new Intl.NumberFormat("ru").format(poteri_plen_s); 
 	var vsego_start = 150000;
 	var perc_smerti = Math.round(poteri_smerti_s/vsego_start*1000)/10;
 	var perc_plen = Math.round(poteri_plen_s/vsego_start*1000)/10;
 	var poteri_plen_s = poteri_plen[poteri_plen.length - 1];
 	var zhivy = Math.round(vsego_start-poteri_smerti_s-poteri_plen_s);
+	var zhivy_format = new Intl.NumberFormat("ru").format(zhivy);
 	var perc_zhivy = Math.round(zhivy/vsego_start*1000)/10;
 	
 	</script>
@@ -285,7 +288,7 @@
 		
 		<h2 class="card-title">Погибли</h2>
 		
-		<p style="font-size: 56px"><script>document.write(poteri_smerti_s);</script> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+		<p style="font-size: 56px"><script>document.write(poteri_smerti_s_format);</script> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
 		  <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
 		  <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
 		  <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
@@ -313,7 +316,7 @@
 			
 				<h2 class="card-title">Взяты в плен</h2>
 				
-				<p style="font-size: 56px"><script>document.write(poteri_plen_s);</script> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+				<p style="font-size: 56px"><script>document.write(poteri_plen_s_format);</script> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
 				  <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
 				  <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
 				  <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
@@ -340,7 +343,7 @@
 			
 				<h2 class="card-title">Ещё живы</h2>
 				
-				<p style="font-size: 56px"><script>document.write(zhivy);</script> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+				<p style="font-size: 56px"><script>document.write(zhivy_format);</script> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
 				  <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
 				  <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
 				  <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
